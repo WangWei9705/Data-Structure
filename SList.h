@@ -310,6 +310,7 @@ void Test() {
 	SListDestroy(&list);
 }
 
+// 删除链表中等于给定值 val 的所有节点。
 struct ListNode* removeElements(struct ListNode* head, int val) {
 	if (head == NULL) {
 		return NULL;
@@ -500,6 +501,7 @@ ListNode* partition(ListNode* pHead, int x) {
 	// ...
 }
 
+// 删除重复结点
 ListNode* deleteDuplication(ListNode* pHead) {
 	if (pHead == NULL) {
 		return NULL;
