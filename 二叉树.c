@@ -158,14 +158,19 @@ Node *Find(Node *root,int v){
 	}
 	// 再从左子树开始找，找到了返回地址
 	Node *p = Find(root->left,v);
-	if(p->val=v){
+	if(p!=NULL){
 		return p;
 	}
 	
 	// 没找到去右子树找
 	p = Find(root->right,v);
+	if(p!=NULL){
 	
-	return p;   // 找到了p为指定地址，没找p为空
+		return p;   // 找到了p为指定地址，没找p为空
+	}
+	else{
+		return NULL;
+	}
 	
 }
 
