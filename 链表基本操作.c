@@ -93,26 +93,8 @@ void SListPopBack(SList *s) {
 	cur->next=NULL;
 }
 		
+
+
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		+
-	// 找到最后一个结点
