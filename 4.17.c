@@ -65,6 +65,72 @@ void Select_sort(int* array,int size){
 	
 	
 	
+// 堆调整
+
+void HeapAdjust(int* array,int szie,int last){
+	
+	int parent = size;
+	int child = parent*2+1;
+	
+	while(child<=last){
+		
+		if(child+1<=last && array[child]<array[child+1]){
+			child++;
+		}
+		
+		
+		if(array[parent]>array[child]){
+			return ;
+		}
+		
+		else{
+			
+			swap(array[parent],array[child]);
+			parent = child;
+			child = parent*2+1;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}	
+// 堆排序
+
+void Heap_sort(int** array,int size){
+	
+	// 建堆
+	
+	// 从最后一个非叶子结点开始
+	for(int i=size/2-1;i>=0;i--){
+		HeapAdjust(array,szie,i);
+	}
+	
+	
+	// 排序
+	// 从最后一个结点开始，直到父节点
+	for(int i=szie-1;i>=0;i--){
+		swap(&array[0],&array[i]);
+		HeapAdjust(array,i,0);
+	}
+}
+		
+	
+	
 // 归并排序
 
 // 1、每次找中间位置，均分序列
